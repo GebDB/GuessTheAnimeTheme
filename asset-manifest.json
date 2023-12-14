@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GuessTheAnimeTheme/static/css/main.02776489.css",
-    "main.js": "/GuessTheAnimeTheme/static/js/main.9f402933.js",
-    "static/js/787.38f16daf.chunk.js": "/GuessTheAnimeTheme/static/js/787.38f16daf.chunk.js",
+    "main.js": "/GuessTheAnimeTheme/static/js/main.b6c1a104.js",
+    "static/js/787.55aec1fa.chunk.js": "/GuessTheAnimeTheme/static/js/787.55aec1fa.chunk.js",
     "index.html": "/GuessTheAnimeTheme/index.html",
     "main.02776489.css.map": "/GuessTheAnimeTheme/static/css/main.02776489.css.map",
-    "main.9f402933.js.map": "/GuessTheAnimeTheme/static/js/main.9f402933.js.map",
-    "787.38f16daf.chunk.js.map": "/GuessTheAnimeTheme/static/js/787.38f16daf.chunk.js.map"
+    "main.b6c1a104.js.map": "/GuessTheAnimeTheme/static/js/main.b6c1a104.js.map",
+    "787.55aec1fa.chunk.js.map": "/GuessTheAnimeTheme/static/js/787.55aec1fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02776489.css",
-    "static/js/main.9f402933.js"
+    "static/js/main.b6c1a104.js"
   ]
 }
