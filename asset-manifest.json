@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gebdb.github.io/GuessTheAnimeTheme/static/css/main.02776489.css",
+    "main.js": "/gebdb.github.io/GuessTheAnimeTheme/static/js/main.e059f790.js",
+    "static/js/787.38f16daf.chunk.js": "/gebdb.github.io/GuessTheAnimeTheme/static/js/787.38f16daf.chunk.js",
+    "index.html": "/gebdb.github.io/GuessTheAnimeTheme/index.html",
+    "main.02776489.css.map": "/gebdb.github.io/GuessTheAnimeTheme/static/css/main.02776489.css.map",
+    "main.e059f790.js.map": "/gebdb.github.io/GuessTheAnimeTheme/static/js/main.e059f790.js.map",
+    "787.38f16daf.chunk.js.map": "/gebdb.github.io/GuessTheAnimeTheme/static/js/787.38f16daf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02776489.css",
+    "static/js/main.e059f790.js"
+  ]
+}
