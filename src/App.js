@@ -16,7 +16,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-          <Route path="/" element={
+          <Route path="/GuessTheAnimeTheme/" element={
           <Home />} />
           <Route path="/about" element={<About />} />
 
