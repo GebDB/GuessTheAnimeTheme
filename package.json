@@ -1,6 +1,6 @@
 {
-  "homepage": "gebdb.github.io/GuessTheAnimeTheme",
-  "name": "my-react-app",
+  "homepage": "http://gebdb.github.io/GuessTheAnimeTheme",
+  "name": "guess-the-anime-theme",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
