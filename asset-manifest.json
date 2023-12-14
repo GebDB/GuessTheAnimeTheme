@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GuessTheAnimeTheme/static/css/main.02776489.css",
-    "main.js": "/GuessTheAnimeTheme/static/js/main.d1d7fdab.js",
+    "main.js": "/GuessTheAnimeTheme/static/js/main.28702dca.js",
     "static/js/787.55aec1fa.chunk.js": "/GuessTheAnimeTheme/static/js/787.55aec1fa.chunk.js",
     "index.html": "/GuessTheAnimeTheme/index.html",
     "main.02776489.css.map": "/GuessTheAnimeTheme/static/css/main.02776489.css.map",
-    "main.d1d7fdab.js.map": "/GuessTheAnimeTheme/static/js/main.d1d7fdab.js.map",
+    "main.28702dca.js.map": "/GuessTheAnimeTheme/static/js/main.28702dca.js.map",
     "787.55aec1fa.chunk.js.map": "/GuessTheAnimeTheme/static/js/787.55aec1fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02776489.css",
-    "static/js/main.d1d7fdab.js"
+    "static/js/main.28702dca.js"
   ]
 }
