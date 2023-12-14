@@ -13,13 +13,12 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/GuessTheAnimeTheme">
       <Header />
       <Routes>
-          <Route path="/GuessTheAnimeTheme/" element={
+          <Route path="/" element={
           <Home />} />
           <Route path="/about" element={<About />} />
-
       </Routes>
       <Footer />
     </Router>
