@@ -23,7 +23,7 @@ const FilterMenu = () => {
                 Openings
                 {isOpenings && (
                     <img className="inline-block rounded-md px-1"
-                    src="/Assets/checkmark1.png"
+                    src={`${process.env.PUBLIC_URL}/Assets/checkmark1.png`}
                     alt="Checkmark"
                     width="25"
                     height="25"

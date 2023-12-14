@@ -7,7 +7,7 @@ const Home = () => {
             <div
               className="bg-cover bg-center relative"
               style={{
-                backgroundImage: `url("/Assets/home_background.jpg")`,
+                backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/home_background.jpg)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'bottom',
                 width: '100%',
