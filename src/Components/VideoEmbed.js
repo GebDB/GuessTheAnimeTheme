@@ -1,14 +1,49 @@
-import FetchLink from './FetchLink';
 import { stringSimilarity } from "../string-similarity.ts";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 
-const VideoEmbed = () => {
-  const data = FetchLink(); // API fetch
-  console.log(data);
 
+const VideoEmbed = ({ refreshTrigger, isOpenings, isEndings }) => {
+  const [data, setData] = useState(null);
+  
   // useState for taking user's guess input and showing the correct answer afterwards.
   const [userGuess, setUserGuess] = useState('');
   const [isGuessCorrect, setIsGuessCorrect] = useState(false);
+  const [APILink, setAPILink] = useState('https://api.animethemes.moe/animetheme?sort=random&include=song,anime,animethemeentries.videos&type=op|ed');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(APILink);
+        const result = await response.json();
+        setData(result);
+        setIsGuessCorrect(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [refreshTrigger, APILink]);
+useEffect(() => {
+  if (isOpenings && isEndings) {
+    setAPILink('https://api.animethemes.moe/animetheme?sort=random&include=song,anime,animethemeentries.videos&type=op|ed');
+  }
+  else if (isOpenings && !isEndings) {
+    setAPILink('https://api.animethemes.moe/animetheme?sort=random&include=song,anime,animethemeentries.videos&type=op');
+  }
+  else if (isEndings && !isOpenings) {
+    setAPILink('https://api.animethemes.moe/animetheme?sort=random&include=song,anime,animethemeentries.videos&type=ed');
+  }
+}, [isOpenings, isEndings])
+
+  if(!data) {
+    return (
+      <div className="text-white font-bold text-xl font-mono">
+        loading
+      </div>
+    )
+  }
+
 
   // Check if data exists and if there is a video
   if (data && data.animethemes && data.animethemes.length > 0) {
@@ -51,6 +86,7 @@ const VideoEmbed = () => {
 
     return (
       <div> 
+
         {/* Fetched video displayed in this div. */}
         <div className="flex items-center justify-center">
           <iframe className="border-solid border-black border-8 rounded-xl bg-black bg-opacity-50"
@@ -93,8 +129,6 @@ const VideoEmbed = () => {
       </div>
     );
   }
-
-  // Return null or some default content if there is no data or videos
   return null;
 };
 
