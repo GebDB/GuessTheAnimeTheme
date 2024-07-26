@@ -85,13 +85,18 @@ useEffect(() => {
     };
 
     return (
-      <div> 
+      <div className="flex flex-col items-center"> 
 
         {/* Fetched video displayed in this div. */}
         <div className="flex items-center justify-center">
-          <iframe className="border-solid border-black border-8 rounded-xl bg-black bg-opacity-50"
-            width="560"
-            height="315"
+          <iframe className="border-solid border-black border-8 rounded-xl bg-black bg-opacity-50 max-w-full 
+          transition-all duration-300 ease-in 
+          2xl:w-[560px] 2xl:h-[315px]
+          xl:w-[560px] xl:h-[315px]
+          lg:w-[560px] lg:h-[315px]
+          md:w-[560px] md:h-[315px]
+          sm:w-[400px] sm:h-[225px]
+          xs:w-[280px] xs:h-[165px]"
             src={videoLink}
             title="Embedded Video"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -100,10 +105,17 @@ useEffect(() => {
         </div>
 
         {/* Correct answer displayed in this div. */}
-        <div className="inline-block text-white text-2xl font-extrabold font-mono drop-shadow-[0_2px_2px_rgba(0,0,0,1.0)]">
+        <div className="inline-block text-white text-2xl text-center font-extrabold font-mono drop-shadow-[0_2px_2px_rgba(0,0,0,1.0)]
+          transition-all duration-300 ease-in 
+          2xl:text-2xl
+          xl:text-2xl
+          lg:text-2xl
+          md:text-2xl
+          sm:text-xl
+          xs:text-lg">
           {isGuessCorrect && (
             <>
-              <p className= "text-green-600">Correct Answer:</p>
+              <p className= "text-green-200 drop-shadow-[4px_4px_0px_rgba(1.0,1.0,1.0,1.0)]">Correct Answer</p>
               <p>Song: {song} {songNumber}</p>
               <p>Anime: {animeName}</p>
             </>
@@ -114,16 +126,37 @@ useEffect(() => {
         {!isGuessCorrect && (
           <div className="m-2 inline-block font-mono drop-shadow-[0_2px_2px_rgba(0,0,0,1.0)]">
             <input type="text" value={userGuess} onChange={(e) => setUserGuess(e.target.value)} placeholder="Enter your guess" 
-             className="text-2xl align-middle  font-extrabold text-black mr-2 w-96 rounded-lg"/>
-            <button onClick={handleGuessSubmit} className=" pl-2 pr-2 align-middle text-xl font-extrabold border-gray-900  bg-green-800 border-2 rounded-lg	text-white">
-              Submit Guess</button>
+             className=" align-middle  font-extrabold text-black mr-2 rounded-lg
+            transition-all duration-300 ease-in 
+            2xl:text-2xl 2xl:w-96
+            xl:text-2xl  xl:w-96
+            lg:text-2xl  lg:w-96
+            md:text-2xl  md:w-96
+            sm:text-xl   sm:w-60
+            xs:text-md   xs:w-25"/>
+            <button onClick={handleGuessSubmit} className=" pl-2 pr-2 align-middle font-extrabold border-gray-900  bg-green-800 border-2 rounded-lg	text-white
+            transition-all duration-300 ease-in 
+            2xl:text-md 2xl:w-15 2xl:h-10
+            xl:text-md  xl:w-15 xl:h-10
+            lg:text-md  lg:w-15 lg:h-10
+            md:text-md  md:w-15 md:h-10
+            sm:text-sm  sm:w-15 sm:h-6
+            xs:text-sm  xs:w-15 xs:h-6">
+              Submit</button>
           </div>
         )}
 
         {/* Show answer button in this div. */}
         {!isGuessCorrect && (
           <div className="m-2 flex justify-end text-xl font-bold font-mono drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)]">
-            <button onClick={showAnswer} className="pl-1 mt-[-8px] border-gray-900  bg-gray-800 border-2 rounded-lg px-1	text-white">Show Answer</button>
+            <button onClick={showAnswer} className="pl-1 mt-[-8px] border-gray-900  bg-gray-800 border-2 rounded-lg px-1	text-white
+            transition-all duration-300 ease-in
+            2xl:text-md 2xl:w-15 2xl:h-10
+            xl:text-md  xl:w-15 xl:h-10
+            lg:text-md  lg:w-15 lg:h-10
+            md:text-md  md:w-15 md:h-10
+            sm:text-sm  sm:w-15 sm:h-6
+            xs:text-sm  xs:w-15 xs:h-6">Show Answer</button>
           </div>
         )}
       </div>
