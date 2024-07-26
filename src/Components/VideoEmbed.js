@@ -126,7 +126,7 @@ useEffect(() => {
         {!isGuessCorrect && (
           <div className="m-2 inline-block font-mono drop-shadow-[0_2px_2px_rgba(0,0,0,1.0)]">
             <input type="text" value={userGuess} onChange={(e) => setUserGuess(e.target.value)} placeholder="Enter your guess" 
-             className=" align-middle  font-extrabold text-black mr-2 rounded-lg
+             className=" align-middle  font-extrabold text-black mr-2 rounded-lg border-gray-400 border-2
             transition-all duration-300 ease-in 
             2xl:text-2xl 2xl:w-96
             xl:text-2xl  xl:w-96
@@ -136,10 +136,10 @@ useEffect(() => {
             xs:text-md   xs:w-25"/>
             <button onClick={handleGuessSubmit} className=" pl-2 pr-2 align-middle font-extrabold border-gray-900  bg-green-800 border-2 rounded-lg	text-white
             transition-all duration-300 ease-in 
-            2xl:text-md 2xl:w-15 2xl:h-10
-            xl:text-md  xl:w-15 xl:h-10
-            lg:text-md  lg:w-15 lg:h-10
-            md:text-md  md:w-15 md:h-10
+            2xl:text-md 2xl:w-15 2xl:h-8
+            xl:text-md  xl:w-15 xl:h-8
+            lg:text-md  lg:w-15 lg:h-8
+            md:text-md  md:w-15 md:h-8
             sm:text-sm  sm:w-15 sm:h-6
             xs:text-sm  xs:w-15 xs:h-6">
               Submit</button>
@@ -152,9 +152,9 @@ useEffect(() => {
             <button onClick={showAnswer} className="pl-1 mt-[-8px] border-gray-900  bg-gray-800 border-2 rounded-lg px-1	text-white
             transition-all duration-300 ease-in
             2xl:text-md 2xl:w-15 2xl:h-10
-            xl:text-md  xl:w-15 xl:h-10
-            lg:text-md  lg:w-15 lg:h-10
-            md:text-md  md:w-15 md:h-10
+            xl:text-md  xl:w-15 xl:h-8
+            lg:text-md  lg:w-15 lg:h-8
+            md:text-md  md:w-15 md:h-8
             sm:text-sm  sm:w-15 sm:h-6
             xs:text-sm  xs:w-15 xs:h-6">Show Answer</button>
           </div>
